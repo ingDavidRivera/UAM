@@ -21,7 +21,7 @@ void loop(){
   Serial.print("Lecturas: ");
   
   // Almacenamiento de las lecturas de los potenciómetros
-  for(int i=0; i<3< i++){
+  for(int i=0; i<3; i++){
     Serial.print(lecturas[i]);
     Serial.print(" ");
   }
