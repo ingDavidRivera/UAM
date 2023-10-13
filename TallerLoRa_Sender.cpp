@@ -13,7 +13,7 @@ void setup() {
   Serial.begin(9600);
   while (!Serial);
 
-  Serial.println("LoRa Sender");
+  Serial.println("Emisor LoRa");
   LoRa.setPins(csPin, resetPin); 
   if (!LoRa.begin(915E6)) {
     Serial.println("Comunicación fallida!");
