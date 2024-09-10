@@ -1,0 +1,52 @@
+// Declarar pines
+// Vehiculares
+#define Rojo 13
+#define Amarillo 12
+#define Verde 11
+// Peatonales
+#define RojoPeatonal 5
+#define VerdePeatonal 4
+
+void setup() {
+// Vehiculares
+pinMode(Rojo ,OUTPUT);
+pinMode(Amarillo ,OUTPUT);
+pinMode(Verde ,OUTPUT);
+// Peatonales
+pinMode(RojoPeatonal ,OUTPUT);
+pinMode(VerdePeatonal ,OUTPUT);
+}
+
+void loop() {
+  Color_Rojo_Vehicular();       // Rojo vehicular, verde peatonal
+  Color_Amarillo_Vehicular();   // Amarillo vehicular, rojo peatonal
+  Color_Verde_Vehicular();      // Verde vehicular, rojo peatonal
+  Color_Amarillo_Vehicular();   // Amarillo vehicular, rojo peatonal
+}
+
+void Color_Rojo_Vehicular(){
+    // Rojo vehicular, verde peatonal
+  digitalWrite(Rojo, HIGH);  
+  digitalWrite(VerdePeatonal, HIGH);
+  digitalWrite(Amarillo,LOW);
+  digitalWrite(Verde,LOW);
+  digitalWrite(RojoPeatonal,LOW);
+}
+
+void Color_Amarillo_Vehicular(){
+  digitalWrite(Amarillo, HIGH);  
+  digitalWrite(RojoPeatonal, HIGH);
+  digitalWrite(Rojo,LOW);
+  digitalWrite(Verde,LOW);
+  digitalWrite(VerdePeatonal,LOW);
+
+}
+
+void Color_Verde_Vehicular(){
+  // Verde vehicular, rojo peatonal
+  digitalWrite(Verde, HIGH);  
+  digitalWrite(RojoPeatonal, HIGH);
+  digitalWrite(Rojo,LOW);
+  digitalWrite(Amarillo,LOW);
+  digitalWrite(VerdePeatonal,LOW);
+}
